@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <title>Graph</title>
+<link href="css/mystyles.css" rel="stylesheet"></head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            Вводится граф. В первой строке - количество вершин и количество рёбер. Вершины графа нумеруются с нуля.
+            Далее вводятся рёбра: пары вершин - концы ребра. Для нахождение точек сочленения нажмите "GO".
+            Список вершин - точек сочленения - будет в нижнем окне вывода. На графе точки сочленения отмечены синим.
+            Вершины можно перемещать на рисунке.
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-two-fifths">
+            <textarea id="input" class="textarea" placeholder="in" rows="15"></textarea>
+            <button class="button is-primary is-light is-fullwidth">GO!</button>
+            <textarea id="output" class="textarea" placeholder="out" rows="10" readonly></textarea>
+        </div>
+        <div class="column is-three-fifths">
+            <div id="mynetwork"></div>
+        </div>
+    </div>
+    <style>
+        .textarea {
+            margin: 20px;
+        }
+        .button {
+            margin: 20px;
+        }
+        .card {
+            margin: 20px;
+        }
+
+        #mynetwork {
+            width: 600px;
+            height: 730px;
+            border: 1px solid lightgray;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    </style>
+<script type="text/javascript" src="main.js"></script></body>
+
+
